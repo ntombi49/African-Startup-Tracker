@@ -30,9 +30,37 @@ startup = {
 
 print(startup)
 
+# database connection
 conn = psycopg2.connect(
     host="localhost",
     database="startup_db",
     user="postgres",
     password="LizzyMkansi@123"
 )
+
+cursor = conn.cursor()
+
+cursor.execute(
+    """
+    INSERT INTO startups
+    (
+        company_name,
+        origin_country,
+        target_sector,
+        funding_amount,
+        source_url
+    )
+    VALUES (%s,%s,%s,%s,%s)
+    """,
+    (
+        "Paystack",
+        "Nigeria",
+        "FinTech",
+        200000000,
+        "https://example.com"
+    )
+)
+
+conn.commit()
+cursor.close()
+conn.close()
