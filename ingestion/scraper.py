@@ -38,8 +38,9 @@ conn = psycopg2.connect(
     password="LizzyMkansi@123"
 )
 
-cursor = conn.cursor()
+cursor = conn.cursor() 
 
+# inserted Test Data
 cursor.execute(
     """
     INSERT INTO startups
@@ -61,6 +62,6 @@ cursor.execute(
     )
 )
 
-conn.commit()
-cursor.close()
+conn.commit()  #save changes
+cursor.close()  #Close connection
 conn.close()
