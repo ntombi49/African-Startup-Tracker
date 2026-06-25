@@ -1,6 +1,7 @@
 import requests
 import re
 from bs4 import BeautifulSoup
+import psycopg2
 
 url = "https://example.com"
 
@@ -28,3 +29,10 @@ startup = {
 }
 
 print(startup)
+
+conn = psycopg2.connect(
+    host="localhost",
+    database="startup_db",
+    user="postgres",
+    password="LizzyMkansi@123"
+)
