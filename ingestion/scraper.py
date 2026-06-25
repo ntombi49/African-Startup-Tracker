@@ -19,3 +19,12 @@ def clean_funding(text):
     return 0
 
 print(clean_funding("$2,500,000"))
+
+startup = {
+    "company_name": "Paystack",
+    "country": "Nigeria",
+    "sector": "FinTech",
+    "funding": 200000000
+}
+
+print(startup)
