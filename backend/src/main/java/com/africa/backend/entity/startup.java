@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "startups")
-public class startup {
+public class Startup {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,7 @@ public class startup {
 
     private Integer funding;
 
-    public startup() {
+    public Startup() {
     }
 
     public Integer getId() {
