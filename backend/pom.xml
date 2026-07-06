@@ -47,12 +47,6 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Redis (optional, you can remove later if not needed) -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-
         <!-- Test Framework -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
